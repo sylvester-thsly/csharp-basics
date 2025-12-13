@@ -39,6 +39,9 @@ This repo follows a **project-based learning** approach:
 
 ## 🗺️ Learning Roadmap
 
+> 📋 **[View Complete Fundamentals Checklist →](./FUNDAMENTALS_CHECKLIST.md)**  
+> *150+ concepts organized by difficulty level with progress tracking*
+
 ### 🟢 Phase 1: Fundamentals (Weeks 1-4) - **IN PROGRESS**
 
 | Week | Topic | Status | Project Application |
