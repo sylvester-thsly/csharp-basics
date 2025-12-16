@@ -51,6 +51,9 @@ namespace Cargonerds.Core
             // Between 100-500 kg CO2 = Standard
             if (emissions < 500) return "Standard 🚛";
             
+            // More than 1000 kg CO2 = Critical Alert
+            if (emissions > 1000) return "CRITICAL ALERT 🚨";
+
             // More than 500 kg CO2 = Heavy impact
             return "Heavy Impact 🏭";
         }
