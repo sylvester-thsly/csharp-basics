@@ -47,8 +47,8 @@ Console.ReadLine();
 // LEARNING MOMENT: WHAT DID WE USE HERE?
 // ==========================================
 // 1. DATA TYPES: 
-//    - 'int' for whole numbers (1, 2, 3)
-//    - 'double' for precision/money (0.50)
+//    - (1, 2, 3)
+//    - 'double' for 'int' for whole numbers precision/money (0.50)
 //    - 'string' for text ("Hello")
 //
 // 2. WHILE LOOP:
