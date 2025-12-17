@@ -11,8 +11,8 @@ Use this file to track your journey. Be honest with yourself!
 | 03 | Operators | [x] | |
 | 04 | If/Else Logic | [x] | |
 | 05 | Loops | [x] | |
-| 06 | Arrays | [ ] | |
-| **07** | **PROJECT: Calculator** | [ ] | |
+| 06 | Arrays | [x] | |
+| **07** | **PROJECT: Calculator** | [x] | |
 
 ## Week 2: Intermediate
 

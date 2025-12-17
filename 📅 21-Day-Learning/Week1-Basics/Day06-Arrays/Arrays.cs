@@ -20,6 +20,10 @@ namespace Week1
             
             // TODO: Use a loop to print each fruit
             // Hint: Use fruits.Length to know how many times to loop
+            for (int i = 0; i < fruits.Length; i++)
+            {
+                Console.WriteLine(fruits[i]);
+            }   
         }
     }
 }
