@@ -18,8 +18,8 @@ Use this file to track your journey. Be honest with yourself!
 
 | Day | Topic | Status | Notes / Struggles |
 |-----|-------|--------|-------------------|
-| 08 | Methods | [ ] | |
-| 09 | Lists | [ ] | |
+| 08 | Methods | [x] | |
+| 09 | Lists | [x] | |
 | 10 | More Methods | [ ] | |
 | 11 | Classes Intro | [ ] | |
 | 12 | Objects | [ ] | |

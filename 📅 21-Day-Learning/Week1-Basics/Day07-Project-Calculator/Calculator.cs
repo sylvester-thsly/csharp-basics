@@ -64,9 +64,11 @@ namespace Week1
                 {
                     keepRunning = true;;
                 }
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey();
             }
 
-            Console.WriteLine("Goodbye!");
+           
         }
     }
 }
