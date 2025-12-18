@@ -12,15 +12,15 @@ Focus: Syntax, Logic, and "Thinking like a Programmer"
 - [x] **Day 02**: Variables & Data Types (Tag 3)
 - [x] **Day 03**: Operators & Math (Tag 4)
 - [x] **Day 04**: Decision Making (If/Else/Switch) (Tag 4)
-- [ ] **Day 05**: Loops (While/For/Do-While) (Tag 6)
-- [ ] **Day 06**: Arrays (Fixed Collections) (Tag 5 intro)
-- [ ] **Day 07**: 🏆 **Mini-Project 1: Calculator**
+- [x] **Day 05**: Loops (While/For/Do-While) (Tag 6)
+- [x] **Day 06**: Arrays (Fixed Collections) (Tag 5 intro)
+- [x] **Day 07**: 🏆 **Mini-Project 1: Calculator**
 
 ## 🟡 Week 2: Structuring Code (Intermediate)
 Focus: Methods, Clean Code, and Object-Oriented Basics
 
-- [ ] **Day 08**: Methods (Functions) (Tag 7)
-- [ ] **Day 09**: Lists (Dynamic Collections)
+- [x] **Day 08**: Methods (Functions) (Tag 7)
+- [x] **Day 09**: Lists (Dynamic Collections)
 - [ ] **Day 10**: Advanced Methods (Parameters/Return) (Tag 7)
 - [ ] **Day 11**: Classes & Objects Intro (Tag 8)
 - [ ] **Day 12**: Object Properties & Constructors (Tag 8)
