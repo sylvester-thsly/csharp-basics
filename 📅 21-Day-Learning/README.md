@@ -8,10 +8,10 @@ Welcome to your **Zero-to-Hero** journey! This roadmap is designed to get you re
 ## 🟢 Week 1: The Building Blocks (Basics)
 Focus: Syntax, Logic, and "Thinking like a Programmer"
 
-- [ ] **Day 01**: Setup & Hello World (Tag 1-2)
-- [ ] **Day 02**: Variables & Data Types (Tag 3)
-- [ ] **Day 03**: Operators & Math (Tag 4)
-- [ ] **Day 04**: Decision Making (If/Else/Switch) (Tag 4)
+- [x] **Day 01**: Setup & Hello World (Tag 1-2)
+- [x] **Day 02**: Variables & Data Types (Tag 3)
+- [x] **Day 03**: Operators & Math (Tag 4)
+- [x] **Day 04**: Decision Making (If/Else/Switch) (Tag 4)
 - [ ] **Day 05**: Loops (While/For/Do-While) (Tag 6)
 - [ ] **Day 06**: Arrays (Fixed Collections) (Tag 5 intro)
 - [ ] **Day 07**: 🏆 **Mini-Project 1: Calculator**
