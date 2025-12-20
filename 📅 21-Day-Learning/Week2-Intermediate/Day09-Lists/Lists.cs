@@ -40,6 +40,10 @@ namespace Week2
 
             // TODO 5: Print the list again to see the change
             Console.WriteLine("\nUpdated List:");
+            foreach (string task in tasks)
+            {
+                Console.WriteLine(task);
+            }
             
 
         }

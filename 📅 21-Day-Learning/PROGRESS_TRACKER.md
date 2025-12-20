@@ -20,7 +20,7 @@ Use this file to track your journey. Be honest with yourself!
 |-----|-------|--------|-------------------|
 | 08 | Methods | [x] | |
 | 09 | Lists | [x] | |
-| 10 | More Methods | [ ] | |
+| 10 | More Methods | [x] | |
 | 11 | Classes Intro | [ ] | |
 | 12 | Objects | [ ] | |
 | 13 | File I/O | [ ] | |

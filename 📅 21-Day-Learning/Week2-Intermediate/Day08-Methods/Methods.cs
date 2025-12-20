@@ -26,7 +26,8 @@ namespace Week2
 
         // TODO 4: Create a method called PrintLine
         // It should print "--------------------"
-        static void PrintLine()
+        static
+        void PrintLine()
         {
             Console.WriteLine("--------------------");
         }
