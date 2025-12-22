@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <!-- Allow multiple Main methods since we have one per day -->
-    <StartupObject>Week2.MoreMethods</StartupObject>
+    <StartupObject>Practice.LoopsBootcamp</StartupObject>
   </PropertyGroup>
 
 </Project>
