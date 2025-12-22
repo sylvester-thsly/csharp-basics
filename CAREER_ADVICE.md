@@ -40,6 +40,7 @@ These are the projects that get you hired in 2025.
 ### 1. Get Certified Early ☁️
 *   **Priority**: AWS Certified Cloud Practitioner or CompTIA Cloud+.
 *   **Why**: Cloud platforms are the "backbone" of modern logistics technology.
+*   **Action Plan**: See [CERTIFICATION_ROADMAP.md](./CERTIFICATION_ROADMAP.md) for details.
 
 ### 2. Document the "Failures" 🐛
 *   **Authenticity Wins**: Recruiters in 2025 love seeing how you fix bugs.
