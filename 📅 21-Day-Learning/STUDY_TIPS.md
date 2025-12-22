@@ -34,6 +34,15 @@
 3.  **Document**: Update `LEARNING_JOURNEY.md` with new skills.
 4. **Push**: `git push` to save everything.
 
+## 💼 Professional Workflow (Using Issues & PRs)
+To get 100% on all GitHub stats (Issues, Pull Requests, Code Review), we use this cycle:
+1. **Issue**: Create an issue for the task (`gh issue create`).
+2. **Branch**: Create a new branch (`git checkout -b feature-name`).
+3. **Work**: Code and Commit (`git commit`).
+4. **Pull Request**: Upload code (`gh pr create`).
+5. **Merge**: Approve and merge (`gh pr merge`).
+
+
 ## Progress Tracking
 - Update `DAILY_JOURNAL.md` every day
 - Check off days in `PROGRESS_TRACKER.md`
