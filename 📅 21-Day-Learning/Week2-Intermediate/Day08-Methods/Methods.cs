@@ -19,6 +19,8 @@ namespace Week2
         }
 
         // --- METHOD 1: Simple Method (No parameters, no return) ---
+        // Mentality Shift: Methods help us break big problems into small pieces.
+        // Instead of writing one huge code block, we write many small, easy ones.
         static void Greet()
         {
             Console.WriteLine("Hello from the Greet method!");
