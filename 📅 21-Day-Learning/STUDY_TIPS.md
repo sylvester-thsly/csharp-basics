@@ -28,6 +28,12 @@
 - Microsoft C# documentation
 - This GitHub repository
 
+## 🛑 End of Session Protocol (The "Streak Saver")
+1. **Reflect**: What did I learn? What was hard?
+2. **Log**: Update `DAILY_JOURNAL.md`.
+3.  **Document**: Update `LEARNING_JOURNEY.md` with new skills.
+4. **Push**: `git push` to save everything.
+
 ## Progress Tracking
 - Update `DAILY_JOURNAL.md` every day
 - Check off days in `PROGRESS_TRACKER.md`
