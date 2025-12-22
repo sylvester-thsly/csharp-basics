@@ -1,6 +1,14 @@
 # 💡 50 C# Project Ideas for Learning
 *A massive backlog of practice ideas to keep the streak alive.*
 
+## 🌟 CAREER PORTFOLIO (The "Cargonerds" Path)
+*These are the projects that build your career in Logistics AI.*
+1.  [ ] **Sustainability Tracker**: Calculate CO2 emissions for routes (Green Logistics).
+2.  [ ] **Smart Supply Chain Optimizer**: Predict disruptions using weather data.
+3.  [ ] **Automated Document Processor**: Extract data from Bills of Lading (OCR).
+4.  [ ] **Warehouse Robot Sim**: Multi-Agent collision avoidance.
+5.  [ ] **Predictive Route Planner**: Optimizing based on fuel/traffic.
+
 ## 🟢 Beginner (Console Basics)
 1.  [ ] **Hello User**: Ask name/comp, print story.
 2.  [ ] **Unit Converter**: Km to Miles, C to F.
