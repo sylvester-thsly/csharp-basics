@@ -11,6 +11,15 @@ int x = 5
 int x = 5;
 ```
 
+### 1.5. Semicolons in Loops (The Daily Struggle)
+```csharp
+// ❌ Wrong - The semicolon kills the loop!
+for (int i = 0; i < 10; i++);
+
+// ✅ Correct - No semicolon here
+for (int i = 0; i < 10; i++)
+```
+
 ### 2. Wrong Method Call
 ```csharp
 // ❌ Wrong - void methods don't return values
