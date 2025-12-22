@@ -20,8 +20,11 @@
 - Add comments to explain complex logic
 - Commit small, working changes
 
-## Resources
-- Your "C# in 21 Tagen" book
+## Keeping Motivation
+- It's okay to have bad days.
+- Consistency > Intensity.
+- If you're stuck, just do 5 minutes.
+- Document your struggles - they are part of the story!
 - Microsoft C# documentation
 - This GitHub repository
 
