@@ -30,6 +30,8 @@ namespace Practice
             
             // TODO 3: Create a for loop that counts DOWN from 5 to 1
             // Hint: for (int i = 5; i >= 1; i--)
+            // Warning: Do NOT put a semicolon here! -> for (...); 
+            // It breaks the loop logic. Learned this the hard way.
             for (int i = 5; i >= 1; i--)
             {
                 // TODO 4: Print the number 'i'
