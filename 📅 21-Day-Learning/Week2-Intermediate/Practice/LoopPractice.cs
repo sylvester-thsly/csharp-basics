@@ -7,6 +7,7 @@ namespace Practice
         static void Main(string[] args)
         {
             Console.WriteLine("=== 🏋️ Loops Bootcamp 🏋️ ===\n");
+            Console.WriteLine("Practice session focused on while and for loops.");
 
             // --- PART 1: THE WHILE LOOP (The "As Long As" Loop) ---
             Console.WriteLine("--- Challenge 1: The Annoying Kid ---");
