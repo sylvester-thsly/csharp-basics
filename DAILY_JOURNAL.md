@@ -7,4 +7,9 @@ Just add one line describing what you did.
 
 - **Dec 18**: Completed Week 2 Day 8 (Methods) & Day 9 (Lists). Total: 9/21 days done! 🚀
   - Added study resources: Common Mistakes guide, Study Tips, Practice Examples
+- **Dec 22**: 🏋️ Extra Practice: Loop Bootcamp.
+  - Struggled with `while` and `for` loop syntax initially (forgot braces, used semicolons wrong).
+  - Created `LoopPractice.cs` and fixed the bugs.
+  - Successfully ran the "Annoying Kid" loop and "Countdown" loop.
+  - **Lesson Learned**: `for (...);` kills the loop! Never do that again. 😅
 - **Dec 17**: Setup 21-Day Learning Roadmap & Week 1. Fixed Git configuration. ✅
