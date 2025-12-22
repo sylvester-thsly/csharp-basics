@@ -43,7 +43,15 @@ To get 100% on all GitHub stats (Issues, Pull Requests, Code Review), we use thi
 5. **Merge**: Approve and merge (`gh pr merge`).
 
 
-## Progress Tracking
-- Update `DAILY_JOURNAL.md` every day
-- Check off days in `PROGRESS_TRACKER.md`
+## 🏆 GitHub Achievement Hunter
+By following our Professional Workflow, you will unlock these badges:
+
+- [ ] **Pull Shark**: Merge your first Pull Request (Tomorrow's Goal!).
+- [ ] **Quickdraw**: Close an issue within 5 minutes of opening.
+- [ ] **YOLO**: Merge a Branch without a Code Review.
+- [ ] **Pair Extraordinaire**: Co-author a commit (Add `Co-authored-by:`).
+- [ ] **Galaxy Brain**: Answer a designated "Discussion" question.
+
+*We are targeting "Pull Shark" for Day 11!* 🦈
+
 - Celebrate small wins! 🎉
