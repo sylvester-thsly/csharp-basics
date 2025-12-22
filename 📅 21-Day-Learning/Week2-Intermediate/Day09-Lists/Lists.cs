@@ -10,6 +10,8 @@ namespace Week2
             Console.WriteLine("=== Day 9: Lists ===\n");
 
             // --- PRACTICE 1: Create and Add ---
+            // Why Lists? Because unlike Arrays, we can add items later!
+            // It feels more like a real shopping list.
             // TODO 1: Create a List of strings called "tasks"
             List<string> tasks = new List<string>();
             
