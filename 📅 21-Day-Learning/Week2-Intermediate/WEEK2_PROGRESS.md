@@ -20,9 +20,10 @@ Learn to structure code with Methods, Lists, and basic OOP concepts.
 ## Time Spent
 - Day 8: ~15 minutes
 - Day 9: ~15 minutes
-- **Total Week 2 so far**: ~30 minutes
+- Day 10: ~20 minutes (Felt heavy, but completed)
+- Loop Bootcamp: ~1 hour (Hardest session yet)
+- **Total Week 2 so far**: ~2 hours
 
 ## Next Session Goals
-1. Complete Day 10 (Methods with Parameters)
-2. Understand return values
-3. Practice combining methods and lists
+1. Move to Day 11 (Classes) - A fresh start!
+2. Leave loops behind for a bit (will practice later).
