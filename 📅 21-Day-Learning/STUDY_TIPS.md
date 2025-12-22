@@ -54,4 +54,24 @@ By following our Professional Workflow, you will unlock these badges:
 
 *We are targeting "Pull Shark" for Day 11!* 🦈
 
+### 🦈 Pull Shark Cheat Sheet (Commands)
+To get the badge, run this sequence:
+```bash
+# 1. Start a new branch
+git checkout -b day-11-classes
+
+# 2. Work & Commit (as usual)
+git add .
+git commit -m "feat: day 11 complete"
+
+# 3. Upload Branch to GitHub
+git push origin day-11-classes
+
+# 4. Create Pull Request
+gh pr create --title "Day 11: Classes" --body "Completed class exercises"
+
+# 5. Merge it! (Unlocks Badge)
+gh pr merge --merge --delete-branch
+```
+
 - Celebrate small wins! 🎉
