@@ -57,7 +57,7 @@ Kommentare erklären den Code und werden vom Compiler ignoriert.
 *   **Mehrzeilig**: `/*` ... `*/` (Kann über mehrere Zeilen gehen).
 *   **Best Practice**: Kommentiere Code, der nicht sofort verständlich ist ("Warum" statt "Was"). lieber zu viel als zu wenig.
 
-## 1.6 Die Main-Methode & Blöcke
+## 1.5ie Main-Methode & Blöcke
 Code wird in **Blöcke** `{ ... }` unterteilt, um ihn lesbar zu machen. Man *könnte* alles in eine Zeile schreiben, aber das macht niemand.
 
 ### Zerlegung von `Main`
@@ -73,3 +73,54 @@ Code wird in **Blöcke** `{ ... }` unterteilt, um ihn lesbar zu machen. Man *kö
     *   *Alternative*: `int` (Ganzzahl) ist auch erlaubt, wird aber seltener genutzt.
 *   **Main**: Der Name des Chefs. Hier startet das Programm.
 *   **string[] args**: Übergabewerte (Argumente) beim Start des Programms.
+
+## 1.6 Organisation (Namespace, Class, Method)
+Wie C# Code sortiert wird (Hierarchie):
+1.  **Namespace (Namensraum)**: Die Schublade. (z.B. `Kap1` oder `System`). Vermeidet Namens-Konflikte.
+2.  **Class (Klasse)**: Der Bauplan. (z.B. `CHalloEins` oder `Console`).
+3.  **Method (Methode)**: Die Funktion/Aktion. (z.B. `Main` oder `WriteLine`).
+
+### Das `using` Schlüsselwort
+*   **Problem**: Ohne `using` muss man immer den vollen Namen schreiben: `System.Console.WriteLine("...")`.
+*   **Lösung**: `using System;` erlaubt uns, einfach `Console.WriteLine("...")` zu schreiben.
+*   **Regel**: Wenn zwei Namensräume die gleiche Klasse haben (z.B. `System.List` und `MyCode.List`), gibt es einen Fehler. Dann muss man doch den vollen Namen nutzen.
+
+## 1.8 The C# Grammar (Anatomie)
+You wanted to know how every C# sentence is built. Here is the translation:
+
+1.  **`namespace Kap1 { ... }`** = **The Book Title**
+    *   Everything inside here belongs to the topic "Kap1". It wraps the whole code.
+2.  **`using System;`** = **The Dictionary**
+    *   Tells the PC: "I am using words from the book 'System'". Without this, it doesn't understand `Console`.
+3.  **`class Programm { ... }`** = **The Chapter**
+    *   A logical subdivision.
+4.  **`static void Main(...) { ... }`** = **"Once upon a time..." (The Start)**
+    *   Every story needs a beginning. C# ALWAYS looks for `Main`.
+5.  **`;` (Semicolon)** = **The Full Stop.**
+    *   Every command MUST end with `;`. Otherwise, the sentence is not finished.
+    *   *Error*: `Console.WriteLine("Hallo")` (Wrong) -> `Console.WriteLine("Hallo");` (Right).
+6.  **`{ }` (Curly Braces)** = **Paragraphs**
+    *   They hold things together that belong together.
+
+## 1.9 Mehrere Main-Methoden (Einstiegspunkt)
+Ein Programm kann **mehrere Klassen** haben, und theoretisch kann jede eine `Main`-Methode haben.
+*   **Problem**: Der Compiler weiß nicht, wo er starten soll (Welches `Main` ist der Chef?).
+*   **Fehler**: `CS0017: Program has more than one entry point defined`.
+*   **Lösung**: Man muss dem Compiler den **Einstiegspunkt (Entry Point)** nennen.
+    *   *Befehl (Alte Schule/Buch)*: `csc /main:Kap1.CHalloZwei HalloDotNet2.cs`
+    *   *Befehl (Modern .NET)*: `dotnet run --property:StartupObject=Kap1.CHalloZwei`
+
+## 1.10 Anatomie einer Fehlermeldung
+Wie man Fehler liest (Beispiel `CS0017`):
+`HalloDotNet2.cs(7,26): error CS0017: Program has more than one entry point...`
+
+1.  **Wo?** `HalloDotNet2.cs(7,26)`
+    *   **Datei**: HalloDotNet2.cs
+    *   **Zeile**: 7
+    *   **Spalte**: 26 (genaue Zeichenposition)
+2.  **Was?** `error CS0017`
+    *   Die eindeutige **Fehlernummer**. Man kann danach googeln.
+3.  **Warum?** `Program has more than one entry point...`
+    *   Die **Beschreibung**.
+
+*   **Tipp**: Doppelklick auf den Fehler im Terminal bringt dich oft direkt zur Zeile.

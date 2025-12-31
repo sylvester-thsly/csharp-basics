@@ -1,4 +1,4 @@
-﻿// Erstes Programm
+﻿// Erstes Programm (Clean State for Tag 2)
 namespace Kap1
 {
     using System;
