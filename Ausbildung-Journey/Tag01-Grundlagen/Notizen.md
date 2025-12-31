@@ -50,3 +50,26 @@ Um Programmieren zu lernen, muss man:
 1.  Den Editor kennen (Visual Studio / VS Code).
 2.  Den Compiler verstehen.
 3.  Fehlermeldungen lesen lernen.
+
+## 1.5 Kommentare
+Kommentare erklären den Code und werden vom Compiler ignoriert.
+*   **Einzeilig**: `//` (Alles danach ist Kommentar).
+*   **Mehrzeilig**: `/*` ... `*/` (Kann über mehrere Zeilen gehen).
+*   **Best Practice**: Kommentiere Code, der nicht sofort verständlich ist ("Warum" statt "Was"). lieber zu viel als zu wenig.
+
+## 1.6 Die Main-Methode & Blöcke
+Code wird in **Blöcke** `{ ... }` unterteilt, um ihn lesbar zu machen. Man *könnte* alles in eine Zeile schreiben, aber das macht niemand.
+
+### Zerlegung von `Main`
+`public static void Main(string[] args)`
+
+*   **public**: Öffentlich. Jeder darf auf diese Methode zugreifen.
+*   **static**: Statisch. Man braucht kein Objekt (keine Instanz) der Klasse, um sie aufzurufen. Sie ist "einfach da".
+*   **void**: Leer. Die Methode gibt **kein Ergebnis** zurück (keine Zahl, keinen Text).
+    *   *Warum?* `void` Methoden sind "Macher", keine "Rechner". Sie tun etwas (z.B. Drucken auf den Bildschirm), aber sie geben dem PC keine Antwort zurück.
+    *   *Analogie*:
+        *   **Nicht-Void**: "Chef, wie viele Eier sind da?" -> Antwort: "5".
+        *   **Void**: "Chef, koche das Essen!" -> Antwort: (Stille, aber das Essen wird gekocht).
+    *   *Alternative*: `int` (Ganzzahl) ist auch erlaubt, wird aber seltener genutzt.
+*   **Main**: Der Name des Chefs. Hier startet das Programm.
+*   **string[] args**: Übergabewerte (Argumente) beim Start des Programms.
