@@ -3,33 +3,31 @@
 ## 3.1 Was ist eine Variable?
 Programme verwalten, speichern und verarbeiten Daten. Variablen dienen als **platzhalter** im Speicher für diese Informationen.
 
-Drei Aspekte sind bei Variablen wichtig:
-1.  **Typ der Variablen**:
-    *   Legt die Größe des reservierten Speichers fest.
-    *   Bestimmt Art und Weise der Daten (Validierung).
-    *   Typensicherheit: `int` kann nur Ganzzahlen speichern, keine `3.14` (double).
-    *   Implizite Konvertierung kann fehlschlagen (z.B. double zu int).
-2.  **Gespeicherte Daten**:
-    *   Müssen zum Typ passen.
-    *   C# ist streng typisiert: `314.0` wird als double interpretiert und passt nicht in `int`.
-3.  **Name der Variablen**:
-    *   Identifiziert den Speicherbereich.
-    *   Erlaubt: Buchstaben, Zahlen, `_`.
-    *   Start: Buchstabe oder `_`.
+... (Siehe Merksatz.md für Kurzfassung) ...
+
+## 3.8 Typumwandlung (Konvertierung)
+
+Wenn man Daten verschiedener Typen mischt, muss man sie oft umwandeln.
+
+### 1. Implizite Konvertierung (Automatisch)
+*   Funktioniert, wenn **kein Datenverlust** möglich ist.
+*   Beispiel: `int` (klein) passt immer in `double` (groß).
+*   `int i = 10; double d = i;` -> Erlaubt.
+
+### 2. Explizite Konvertierung (Cast)
+*   Nötig, wenn **Datenverlust** möglich ist.
+*   Muss dem Compiler erzwungen werden durch `(Zieltyp)Variable`.
+*   Beispiel: `double` (groß, mit Komma) in `int` (klein, ohne Komma).
+*   `double d = 3.14; int i = (int)d;` -> `i` ist jetzt `3` (Verlust der .14).
 
 ## 3.2 Der Variablenname
 *   **Grundsatz**: So kurz wie möglich, so aussagekräftig wie nötig.
-*   **Konvention**: Typinformation oft als Präfix ("Ungarische Notation" / Legacy-Stil, aber hier im Lehrmaterial erwähnt).
+*   **Konvention**: Typinformation oft als Präfix ("Ungarische Notation").
 
-### Typen-Präfixe (Tabelle 3.1)
-| Datentyp | Präfix (Beispiele) |
+### Typen-Präfixe (Legacy)
+| Datentyp | Präfix |
 | :--- | :--- |
-| `boolean` | `bln`, `b` (bAnrede) |
-| `byte` | `byt`, `bt` (btMonat) |
-| `sbyte` | `sbyt`, `sbt` (sbtWoche) |
-| `double` | `dbl`, `d` (dWaehrung) |
-| `int` | `int`, `i` (iAlter) |
-| `long` | `lng`, `l` (lSekunden) |
-| `object` | `obj`, `o` (oMyObject) |
-
-*   **Vermeidung**: Namen, die sich nur durch Groß-/Kleinschreibung unterscheiden (z.B. `iMwSt` vs `iMWST`).
+| `boolean` | `bln`, `b` |
+| `double` | `dbl`, `d` |
+| `int` | `int`, `i` |
+| `string` | `str`, `s` |
