@@ -124,3 +124,48 @@ Wie man Fehler liest (Beispiel `CS0017`):
     *   Die **Beschreibung**.
 
 *   **Tipp**: Doppelklick auf den Fehler im Terminal bringt dich oft direkt zur Zeile.
+
+## 1.11 Case Sensitivity (Groß-/Kleinschreibung)
+C# ist **streng**. `Main` ist nicht `main`.
+*   **Der Test**: Wenn du `main` (klein) schreibst, findet der Compiler den Startknopf nicht (`error CS1558`).
+*   **Merke**: C# unterscheidet penibel zwischen Groß- und Kleinschreibung.
+
+## 1.12 Argumente (`args`)
+Der rätselhafte Teil `string[] args`:
+*   **Was ist das?** Ein Korb (Array) für Wörter (Strings), die man dem Programm beim Start mitgibt.
+*   **Beispiel**: `dotnet run -- Hello`
+    *   `args[0]` enthält "Hello".
+*   **Index**: Computer zählen ab **0**, nicht ab 1.
+    *   1. Wort = `args[0]`
+    *   2. Wort = `args[1]`
+
+## 1.13 Workshop (Knowledge Check)
+Here are the key questions from the book (Translated):
+
+**Q1: Is it possible to use objects from other languages (like VB.NET) easily in C#?**
+*   **A: YES.** Thanks to the .NET Runtime and IL (Intermediate Language), all .NET languages can talk to each other.
+
+**Q2: Is it possible to turn off the Garbage Collector (Memory Management) or manage it yourself?**
+*   **A: YES.**
+    *   You must use the `unsafe` keyword.
+    *   *Advice*: Don't do it unless you really have to. Let .NET handle the trash.
+    *   *Example*: `static unsafe void Main()`
+
+**Q3: What is the difference between IL-Code and Machine Code?**
+*   **A: The Cooking Process.**
+    *   **IL-Code (Intermediate)**: What the C# Compiler creates. It works on ANY computer, but the CPU can't read it yet. (Like a Recipe from the book).
+    *   **Machine Code**: What the JIT Compiler creates. It is specific to YOUR CPU (Intel/AMD/ARM). It runs on the metal. (Like the cooked meal).
+
+## 1.14 Quiz & Übungen (Do It Yourself)
+**Quiz Answers:**
+1.  **Main() vs main()**: `Main` ist der offizielle Einstiegspunkt (Großes M). `main` wird ignoriert.
+2.  **Argumente**: Mit **Leerzeichen** (Space). Bsp: `Programm.exe Apfel Birne`.
+3.  **Kompilieren (2 Mains)**: Man muss dem Compiler den Eintragungspunkt nennen.
+    *   `csc /main:Kap1.CZwei Program.cs` (Buch-Stil)
+    *   `dotnet run --property:StartupObject=Kap1.CZwei` (Modern)
+     
+**Übungen Answers:**
+ 1.  **Base Framework**: Die riesige Bibliothek (.NET Class Library) + die Runtime (CLR).
+2.  **Fehlermeldung**: `Datei(Zeile,Spalte): error ID: Text`.
+3.  **CS0017**: "Mehr als ein Main gefunden". Du hast 2 Türen, Windows weiß nicht, welche es nehmen soll.
+
