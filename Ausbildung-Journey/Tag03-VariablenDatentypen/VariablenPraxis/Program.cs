@@ -10,39 +10,27 @@ namespace VariablenPraxis
             Console.WriteLine("=== Tag 3: Variablen und Datentypen ===");
 
             // 1. Deklaration und Initialisierung
-            int iGanzzahl;
-            iGanzzahl = 42;
+            int iGanzzahl = 42;
             Console.WriteLine($"iGanzzahl: {iGanzzahl}");
 
-            // 2. Implizite & Explizite Konvertierung (Type Conversion)
-            Console.WriteLine("\n=== Konvertierung ===");
-
-            // Implizit (Klein in Groß passt immer)
+            // 2. Implizite & Explizite Konvertierung
             int iKlein = 100;
-            double dGross = iKlein; // Automatisch: int passt in double
-            Console.WriteLine($"Implizit (int -> double): {dGross}");
-
-            // Explizit (Groß in Klein passt NICHT automatisch)
+            double dGross = iKlein; 
             double dPi = 3.14;
-            // int iPi = dPi; // Das wäre ein Fehler!
-            int iPi = (int)dPi; // "Cast": Wir erzwingen es (Kommazahlen fallen weg!)
-            Console.WriteLine($"Explizit (double -> int): {dPi} wird zu {iPi}");
+            int iPi = (int)dPi;
+            Console.WriteLine($"Konvertierung: {dGross} / {iPi}");
 
-            // Datenverlust Warnung
-            if (iPi != dPi)
-            {
-                Console.WriteLine("-> Achtung: Datenverlust durch Cast!");
-            }
+            // --- HIER DEIN CODE ---
+            // Nächste Aufgabe: Genauigkeit (Precision)
+            // Schreibe hier den Code für das float vs double vs decimal Experiment
 
-            // 3. Namenskonventionen
-            Console.WriteLine("\n=== Namenskonventionen ===");
-            bool bStatus = true;
-            string sText = "Hallo";
-            byte btMonat = 12;
-
-            Console.WriteLine($"bStatus: {bStatus}");
-            Console.WriteLine($"sText: {sText}");
-            Console.WriteLine($"btMonat: {btMonat}");
+            float num = 1.1f;
+            double num2 = 1.1;
+            decimal num3 = 1.1m;
+            Console.WriteLine($"float: {num}");
+            Console.WriteLine($"double: {num2}");
+            Console.WriteLine($"decimal: {num3}");
+            
         }
     }
 }
