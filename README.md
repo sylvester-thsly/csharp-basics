@@ -21,34 +21,46 @@ This repository documents my journey learning C# from the ground up. Each "Tag" 
 
 ---
 
+## 🗺️ Quick Navigation
+
+| Document | Description |
+|----------|-------------|
+| **[📂 Module Index](Ausbildung-Journey/INDEX.md)** | Navigate all learning modules |
+| **[🎯 2026 Roadmap](Ausbildung-Journey/Roadmap-2026.md)** | 12-week plan to API mastery |
+| **[🧠 Learning Strategy](Ausbildung-Journey/Learning-Strategy.md)** | My personalized study method |
+| **[📝 Exam (Tag 1-3)](Ausbildung-Journey/Exam-Tag1-3.md)** | Self-assessment test |
+
+---
+
 ## 🗂️ Repository Structure
 
 ```
-Ausbildung-Journey/
-├── Tag01-Grundlagen/          # C# Basics & .NET Framework
-├── Tag02-VisualStudio/        # IDE Setup & Tooling
-├── Tag03-VariablenDatentypen/ # Variables & Data Types
-└── ...                        # More modules coming soon
+csharp-basics/
+├── Ausbildung-Journey/
+│   ├── INDEX.md                    # 👈 Start here for navigation
+│   ├── Roadmap-2026.md             # 12-week learning plan
+│   ├── Learning-Strategy.md        # Study methodology
+│   ├── Tag01-Grundlagen/           # C# Basics & .NET
+│   ├── Tag02-VisualStudio/         # IDE Setup
+│   ├── Tag03-VariablenDatentypen/  # Variables & Types
+│   └── ...                         # More modules coming
+└── README.md                       # You are here
 ```
-
-Each module contains:
-- `Notizen.md` - Comprehensive notes
-- `Merksatz.md` - Quick summary/cheat sheet
-- `Quiz_Loesungen.md` - Quiz answers (where applicable)
-- Practice projects (Console apps)
 
 ---
 
 ## 🚀 Progress Tracker
 
-| Tag | Topic | Status |
-|-----|-------|--------|
-| **Tag 1** | C# Basics & .NET Framework | ✅ Complete |
-| **Tag 2** | Visual Studio / IDE Setup | ✅ Complete |
-| **Tag 3** | Variables & Data Types | ✅ Complete |
-| **Tag 4** | Control Structures | 🔄 In Progress |
-| **Tag 5** | Methods & Functions | ⏳ Upcoming |
-| **Tag 6** | Object-Oriented Programming | ⏳ Upcoming |
+| Tag | Topic | Status | Date |
+|-----|-------|--------|------|
+| **Tag 1** | C# Basics & .NET Framework | ✅ Complete | Dec 30, 2025 |
+| **Tag 2** | Visual Studio / IDE Setup | ✅ Complete | Dec 31, 2025 |
+| **Tag 3** | Variables & Data Types | ✅ Complete | Jan 10, 2026 |
+| **Tag 4** | Control Structures | 🔄 In Progress | Jan 20, 2026 |
+| **Tag 5** | Methods & Functions | ⏳ Upcoming | - |
+| **Tag 6** | Object-Oriented Programming | ⏳ Upcoming | - |
+
+**[View Full Roadmap →](Ausbildung-Journey/Roadmap-2026.md)**
 
 ---
 
@@ -87,10 +99,29 @@ dotnet run
 
 ## 🎯 Goals
 
+**Short-term (12 weeks):**
 - [ ] Complete all fundamental C# topics (Variables → OOP → Advanced)
 - [ ] Build a console-based project (e.g., Calculator, Todo App)
 - [ ] Transition to ASP.NET Core for web development
 - [ ] Create a full backend API with database integration
+
+**Long-term:**
+- [ ] Master ASP.NET Core and Entity Framework
+- [ ] Build production-ready REST APIs
+- [ ] Contribute to open-source C# projects
+- [ ] Secure a backend developer position
+
+---
+
+## 📊 Learning Methodology
+
+I follow a **30% Theory / 70% Practice** approach:
+1. **Read** the concept (15 min)
+2. **Explain** it in my own words (5 min)
+3. **Code** 3 examples (15 min)
+4. **Review** from memory the next day (5 min)
+
+**[Read Full Strategy →](Ausbildung-Journey/Learning-Strategy.md)**
 
 ---
 
@@ -107,3 +138,8 @@ This is a personal learning repository, but if you spot errors or have suggestio
 ---
 
 **⭐ If you're also learning C#, feel free to star this repo and follow along!**
+
+---
+
+**Last Updated:** January 17, 2026  
+**Current Focus:** Mastering fundamentals with daily practice drills
