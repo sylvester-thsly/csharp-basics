@@ -34,10 +34,10 @@
 5. Print them all
 
 **Checklist:**
-- [ ] Create project
-- [ ] See "Hello, World!" in console
-- [ ] Declare 5 different variable types
-- [ ] Print all variables
+- [x] Create project
+- [x] See "Hello, World!" in console
+- [x] Declare 5 different variable types
+- [x] Print all variables
 
 ---
 
@@ -51,10 +51,10 @@
 4. See what happens when you lose data
 
 **Checklist:**
-- [ ] Declare all number types
-- [ ] Try implicit conversion
-- [ ] Try explicit conversion (cast)
-- [ ] Understand the difference
+- [x] Declare all number types
+- [x] Try implicit conversion
+- [x] Try explicit conversion (cast)
+- [x] Understand the difference
 
 ---
 
@@ -68,10 +68,10 @@
 4. Build: Simple calculator (2 numbers, 1 operation)
 
 **Checklist:**
-- [ ] Test all operators
-- [ ] Build calculator
-- [ ] Handle division by zero
-- [ ] Test with different numbers
+- [x] Test all operators
+- [x] Build calculator
+- [x] Handle division by zero
+- [x] Test with different numbers
 
 ---
 
@@ -149,9 +149,9 @@
 
 | Date | Topic | Coded? | Works? | Confidence |
 |------|-------|--------|--------|------------|
-| Jan 20 | Hello World | ⬜ | ⬜ | __/10 |
-| Jan 21 | Data Types | ⬜ | ⬜ | __/10 |
-| Jan 22 | Operators | ⬜ | ⬜ | __/10 |
+| Jan 20 | Hello World | ✅ | ✅ | 10/10 |
+| Jan 21 | Data Types | ✅ | ✅ | 10/10 |
+| Jan 22 | Operators | ✅ | ✅ | 10/10 |
 | Jan 23 | if/else | ⬜ | ⬜ | __/10 |
 | Jan 24 | Loops | ⬜ | ⬜ | __/10 |
 | Jan 25 | Calculator | ⬜ | ⬜ | __/10 |
