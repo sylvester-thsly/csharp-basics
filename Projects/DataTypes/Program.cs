@@ -4,49 +4,36 @@ class Program
 {
     static void Main()
     {
-        // Integer types (whole numbers)
-        int normalNumber = 100;
-        long bigNumber = 9999999999;
+        Console.WriteLine("=== TEST TIME! ===");
+
+        // --- CHALLENGE 1: Explicit Conversion ---
+        // 1. Create a double variable 'myHeight' with value 1.75
+        // 2. Cast it to an int variable 'myHeightInt'
+        // 3. Print both. What value is lost?
         
-        // Decimal types (numbers with decimals)
-        float smallDecimal = 3.14f;      // f = float
-        double mediumDecimal = 3.14159;
-        decimal preciseDecimal = 3.14159m; // m = decimal
+        // [WRITE CODE HERE]
+        // creating  a double variable 'myHeight' with value 1.75
+        double myHeight = 1.75; 
+        int myHeightInt = (int)myHeight;
+        Console.WriteLine(myHeight);
+        Console.WriteLine(myHeightInt); // Prints the int version
+
+      
+
+
+        // --- CHALLENGE 2: Math Operators ---
+        // 1. Create two variables: int a = 7, int b = 2;
+        // 2. Calculate and print the result of: a / b
+        // 3. (Tricky!) Why is the answer not 3.5? Write your answer as a comment // 
+        // 4. Fix it to print 3.5 using casting or doubles.
         
-        // Print them
-        Console.WriteLine("int: " + normalNumber);
-        Console.WriteLine("long: " + bigNumber);
-        Console.WriteLine("float: " + smallDecimal);
-        Console.WriteLine("double: " + mediumDecimal);
-        Console.WriteLine("decimal: " + preciseDecimal);
+        // [WRITE CODE HERE
+        // creating two variables: int a = 7, int b = 2;
 
-        // --- PART 2: Implicit Conversion (Automatic) ---
-        // Imagine: Putting a small cup of water (int) into a big bucket (long)
-        int small = 100;
-        long big = small;  // SAFE! Computer does this automatically.
-
-        Console.WriteLine("\n--- Implicit Conversion ---");
-        Console.WriteLine("small (int): " + small);
-        Console.WriteLine("big (long): " + big);
-
-
-
-//Yes! Challenge time! 🥊
-
-//Here is your mission. Write this code inside Program.cs below the other code:
-
-//Your Mission:
-//Declare an int variable named myAge and set it to your age (25).
-//Declare a double variable named myAgeDouble.
-//Assign myAge to myAgeDouble (Implicit conversion).
-//Print myAgeDouble to the console.
-//Bonus Question: Does it print 25 or 25.0? (Write the code to find out!)
-
-//Go ahead! Edit Program.cs, save, and run dotnet run. Telling me what happens!
-
-int myAge = 25;
-double myAgeDouble = myAge; 
-Console.WriteLine($"my age that Double is: " + myAgeDouble);
+        int a = 7; 
+        int b = 2; 
+        Console.WriteLine(a/b); 
+        
 
 
 
@@ -55,28 +42,13 @@ Console.WriteLine($"my age that Double is: " + myAgeDouble);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // --- CHALLENGE 3: Modulo (Remainder) ---
+        // 1. Calculate: 10 % 3
+        // 2. Print the result.
+        
+        // [WRITE CODE HERE]
+        // --- CHALLENGE 3: Modulo (Remainder) ---
+        Console.WriteLine(10 % 3);
 
     }
 }
