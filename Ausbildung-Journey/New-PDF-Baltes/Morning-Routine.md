@@ -85,8 +85,8 @@
 4. Nested if: Age + student status checker
 
 **Checklist:**
-- [ ] Write simple if
-- [ ] Write if/else
+- [x] Write simple if
+- [x] Write if/else
 - [ ] Write if/else if chain
 - [ ] Test all branches
 
