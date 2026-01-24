@@ -23,7 +23,8 @@
     - [x] Interpolation ($"...")
     - [x] Properties (.Length, .IndexOf)
     - [x] Substrings (DNA Challenge)
-    - [ ] Quiz
+    - [x] Case Manipulation (.ToUpper, .ToLower)
+    - [x] Quiz
 - [ ] **5. Logic** (Next Up!)
 - [ ] **6. Conditionals** (Matches Day 4)
 - [ ] **7. Arrays**

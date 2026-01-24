@@ -92,14 +92,15 @@
 
 ---
 
-### **Friday, Jan 24 - Loops**
-**Goal:** Repeat actions
+### **Friday, Jan 24 - SICK DAY (REST)**
+**Goal:** RECOVER. Health comes first.
 
-**Tasks:**
-1. for loop: Print 1-10
-2. while loop: Count down from 10
-3. do-while: Ask user for input until valid
-4. foreach: (we'll skip this for now)
+- [ ] Go to hospital
+- [ ] Sleep
+- [ ] Drink water
+- [ ] NO CODING allowed.
+
+(Previous plan moved to Saturday/Monday).
 
 **Checklist:**
 - [ ] Write for loop
@@ -153,7 +154,7 @@
 | Jan 21 | Data Types | ✅ | ✅ | 10/10 |
 | Jan 22 | Operators | ✅ | ✅ | 10/10 |
 | Jan 23 | if/else | ⬜ | ⬜ | __/10 |
-| Jan 24 | Loops | ⬜ | ⬜ | __/10 |
+| Jan 24 | SICK DAY | ❌ | ❌ | --/10 |
 | Jan 25 | Calculator | ⬜ | ⬜ | __/10 |
 
 ---
