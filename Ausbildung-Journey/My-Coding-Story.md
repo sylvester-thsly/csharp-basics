@@ -80,6 +80,39 @@ And for the first time, Sylvester listened. He knew that rest was part of the tr
 
 ---
 
+## ⛩️ Chapter 4: The Gatekeeper
+**Date:** Thursday, Jan 23, 2026 (5:00 AM)
+**Status:** The Power of Choice.
+
+Sylvester approached the **Club of Code**. The Bouncer stopped him.
+"You cannot pass," the Bouncer code said. "Unless you meet the Conditions."
+
+Sylvester learned the spell of Decision: **`if / else`**.
+He built a digital gatekeeper:
+`if (age >= 18 && hasID == true)`
+
+He realized that code is not just a calculator. It is a brain. It can decide.
+He felt powerful. He controlled the flow of logic.
+
+---
+
+## 🚑 Chapter 5: System Failure
+**Date:** Friday, Jan 24, 2026
+**Status:** CRITICAL ERROR.
+
+But power comes at a cost. The biological machine (Sylvester) overheated.
+**Error 500: Internal Server Error (Headache).**
+**System Crash (Full Body Pain).**
+
+The alarm rang, but the body did not move.
+Sylvester feared he had failed. "If I stop, do I lose?"
+But the Mentor whispered: *"Rest is not quitting. Rest is maintenance."*
+
+He spent the day in the repair shop (Hospital).
+He did not code. He slept. He rebooted.
+
+---
+
 ## 🔮 To Be Continued...
-**Next Chapter:** **The Decision** (`if` / `else`)
-*Can Sylvester teach the machine to choose? Or will he remain a linear thinker forever?*
+**Next Chapter:** **The Resurrection** (Loops & Grades)
+*Sylvester returns from the dead. Will he remember the syntax? Or has the formatting virus wiped his memory?*
