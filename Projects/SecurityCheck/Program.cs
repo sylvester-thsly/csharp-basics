@@ -11,11 +11,19 @@ class Program
         // TODO: Finish logic after school
         if (score >= 90)
         {
-            Console.WriteLine("Grade: A");
+            Console.WriteLine("Grade: A (Excellent!) 🌟");
+        }
+        else if (score >= 80)
+        {
+            Console.WriteLine("Grade: B (Good Job) 👍");
+        }
+        else if (score >= 70)
+        {
+            Console.WriteLine("Grade: C (You Passed) ✅");
         }
         else
         {
-            Console.WriteLine("Work in progress...");
+            Console.WriteLine("Grade: F (Try Again) ❌");
         }
     }
 }

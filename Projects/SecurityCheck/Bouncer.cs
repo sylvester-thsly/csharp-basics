@@ -1,8 +1,8 @@
 ﻿using System;
 
-class Program
+class BouncerArchive
 {
-    static void Main(string[] args)
+    static void ArchiveMain(string[] args)
     {
         Console.WriteLine("--- CLUB SECURITY CHECK ---");
         
