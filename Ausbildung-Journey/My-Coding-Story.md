@@ -161,8 +161,50 @@ He realized: *The Senior Developer is not the one who knows everything. The Seni
 
 ---
 
+
+## ♾️ Chapter 7: The Infinite Machine
+**Date:** Thursday, Jan 29, 2026 (05:00 AM)
+**Status:** AUTOMATED.
+
+Sylvester looked at his creation. It was good, but it was fragile. One container, then death.
+"I want it to run forever," he said. "Like Maersk."
+
+He discovered the **Loop of Infinity**: `while (true)`.
+He wrapped his Logic inside the Loop.
+*   He fed it 5,000kg. **ACCEPTED.**
+*   He fed it 40,000kg. **REJECTED.**
+*   The machine did not stop. It asked: *"Next?"*
+
+He realized: *I am no longer running the code. The code is running itself.*
+He had built an Engine.
+
+---
+
+
+## 📦 Chapter 8: The Warehouse (Memory)
+**Date:** Thursday, Jan 29, 2026 (Morning)
+**Status:** PROFITABLE.
+
+The Engine was running forever, but it was forgetful.
+"How much money did we make?" the Boss asked.
+The engine didn't know. It had forgotten the containers as soon as they left.
+
+Sylvester built a **Warehouse** (`List<int>`).
+Every time the engine accepted a container, he threw the Receipt (`price`) into the Magic Bag.
+`containerPrices.Add(price);`
+
+At the end of the shift (`exit`), he opened the bag.
+`containerPrices.Sum();`
+
+**Total Revenue: $1,100.**
+He wasn't just processing Cargo. He was tracking Value.
+
+---
+
 ## 🔮 To Be Continued...
-**Next Chapter:** **The Loop of Infinity** (100 Containers)
+**Next Chapter:** **The Toolbox** (Methods)
+*The `Main` method is getting messy. It's time to organize the tools.*
+
 
 **Next Chapter:** **The Loop of Infinity** (100 Containers)
 
