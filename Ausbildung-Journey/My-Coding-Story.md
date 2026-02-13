@@ -201,9 +201,29 @@ He wasn't just processing Cargo. He was tracking Value.
 
 ---
 
+
+## 🛠️ Chapter 9: The Toolbox (Methods)
+**Date:** Friday, Feb 13, 2026 (05:00 AM)
+**Status:** REFACTORED.
+
+The `Main` method was a monster. 100 lines of spaghetti.
+"This is not Engineering," Sylvester said. "This is a script."
+
+He created a **Tool**: `CalculatePrice(weight, type)`.
+He moved the Logic into the Tool.
+Now, the Main loop is simple:
+1.  Get Input.
+2.  `int price = CalculatePrice(...)`
+3.  Add to List.
+
+The code is clean. The logic is isolated.
+The Script has become an **Architecture**.
+
+---
+
 ## 🔮 To Be Continued...
-**Next Chapter:** **The Toolbox** (Methods)
-*The `Main` method is getting messy. It's time to organize the tools.*
+**Next Chapter:** **The Blueprint** (Classes & Objects)
+*We are still passing `weight` and `type` separately. What if a Container was... a Thing?*
 
 
 **Next Chapter:** **The Loop of Infinity** (100 Containers)

@@ -8,7 +8,7 @@ namespace FreightSystem.PricingManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.0 (The Ledger) ---");
+            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.1 (The Toolbox) ---");
             Console.WriteLine("(Type 'exit' to finish for the day)");
 
             // 1. THE WAREHOUSE (List)
@@ -47,42 +47,25 @@ namespace FreightSystem.PricingManager
 
                 Console.WriteLine($"Processing Container... Weight: {containerWeight} kg");
 
-                // BUSINESS LOGIC
-                if (containerType == "Dangerous")
-                {
-                    Console.WriteLine("STATUS: REJECTED ❌");
-                    // Rejected items make $0. We don't add to the list.
-                }
-                else if (containerType == "Standard")
-                {
-                    if (containerWeight > 30000)
-                    {
-                        Console.WriteLine("STATUS: REJECTED ❌");
-                        Console.WriteLine("Reason: Too Heavy for Road Transport.");
-                    }
-                    else if (containerWeight > 10000)
-                    {
-                        int price = 200 + 500;
-                        Console.WriteLine("STATUS: ACCEPTED (Heavy Cargo) ⚠️");
-                        Console.WriteLine($"Price: ${price}");
-                        
-                        // ADD TO LIST
-                        containerPrices.Add(price);
-                    }
-                    else
-                    {
-                        int price = 200;
-                        Console.WriteLine("STATUS: ACCEPTED (Standard) ✅");
-                        Console.WriteLine($"Price: ${price}");
+                // --- MODIFIED BUSINESS LOGIC (USING THE NEW TOOL!) ---
+                
+                // Call our new tool to get the price
+                int price = CalculatePrice(containerWeight, containerType);
 
-                        // ADD TO LIST
-                        containerPrices.Add(price);
-                    }
+                // Print the result based on the price
+                if (price == 0) // 0 means Rejected in our logic
+                {
+                     Console.WriteLine("STATUS: REJECTED ❌");
                 }
                 else
                 {
-                    Console.WriteLine("STATUS: UNKNOWN TYPE ❓");
+                    Console.WriteLine("STATUS: ACCEPTED ✅");
+                    Console.WriteLine($"Price: ${price}");
+                    containerPrices.Add(price);
                 }
+                
+                // --- END OF NEW LOGIC ---
+
             } // End of Loop
 
             // 3. THE SUMMARY (End of Day Report)
@@ -91,5 +74,23 @@ namespace FreightSystem.PricingManager
             Console.WriteLine($"Total Revenue: ${containerPrices.Sum()}");
             Console.WriteLine("Good job today! See you tomorrow. 🚛💰");
         }
+
+        // 4. THE TOOLBOX (Methods)
+        // This is the clean, reusable logic tool.
+        static int CalculatePrice(int weight, string type)
+        {
+            if (type == "Dangerous")
+            {
+                return 0; // Rejected
+            }
+            else if (type == "Standard")
+            {
+                if (weight > 30000) return 0; // Rejected
+                else if (weight > 10000) return 700; // Heavy
+                else return 200; // Standard
+            }
+            return 0; // Unknown
+        }
+
     }
 }
