@@ -66,6 +66,10 @@ namespace FreightSystem.PricingManager
         }
 
         // --- THE BLUEPRINT (Construction Plan) ---
+        /// <summary>
+        /// Represents a standard shipping container with weight and type.
+        /// (This is our Object-Oriented Blueprint!)
+        /// </summary>
         class Container
         {
             // STATE (Data)
@@ -75,6 +79,10 @@ namespace FreightSystem.PricingManager
             // BEHAVIOR (Logic)
             // Notice: No 'static'. No parameters (int w, string t).
             // It uses 'this.Weight' and 'this.Type'.
+            /// <summary>
+            /// Calculates the shipping price based on weight and type rules.
+            /// </summary>
+            /// <returns>Price in Dollars (USD)</returns>
             public int CalculatePrice()
             {
                 if (this.Type == "Dangerous")
