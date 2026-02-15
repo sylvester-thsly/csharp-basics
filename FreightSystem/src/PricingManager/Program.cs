@@ -29,7 +29,7 @@ namespace FreightSystem.PricingManager
 
                 try 
                 {
-                     myBox.weight = int.Parse(weightInput); // Putting data INTO the box
+                     myBox.Weight = int.Parse(weightInput); // Putting data INTO the box
                 }
                 catch
                 {
@@ -69,12 +69,12 @@ namespace FreightSystem.PricingManager
         class Container
         {
             // STATE (Data)
-            public int weight;
+            public int Weight;
             public string Type;
 
             // BEHAVIOR (Logic)
             // Notice: No 'static'. No parameters (int w, string t).
-            // It uses 'this.weight' and 'this.Type'.
+            // It uses 'this.Weight' and 'this.Type'.
             public int CalculatePrice()
             {
                 if (this.Type == "Dangerous")
@@ -83,8 +83,8 @@ namespace FreightSystem.PricingManager
                 }
                 else if (this.Type == "Standard")
                 {
-                    if (this.weight > 30000) return 0; // Rejected
-                    else if (this.weight > 10000) return 700; // Heavy
+                    if (this.Weight > 30000) return 0; // Rejected
+                    else if (this.Weight > 10000) return 700; // Heavy
                     else return 200; // Standard
                 }
                 return 0; // Unknown
