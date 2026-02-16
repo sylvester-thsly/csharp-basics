@@ -11,7 +11,7 @@
 
 ## 🏭 Phase 2: The Factory (Object Oriented Programming)
 - [x] **Tag 8: Grundkurs OOP I (Klassen & Objekte)** -> *Done (The Blueprint Works!)*
-- [ ] **Tag 9: Grundkurs OOP II (Felder, Eigenschaften, Konstruktor)** -> *Upcoming*
+- [x] **Tag 9: Grundkurs OOP II (Felder, Eigenschaften, Konstruktor)** -> *Done (The Factory Works!)*
 - [ ] **Tag 10: Arrays & Listen** (The Warehouse) -> *Review needed (We did Lists, but Arrays are useful)*
 - [ ] **Tag 11: Vererbung** (Inheritance - The Truck & The Van)
 - [ ] **Tag 12: Polymorphie** (Many Forms)

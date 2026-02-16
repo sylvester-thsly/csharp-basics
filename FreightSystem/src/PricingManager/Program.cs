@@ -8,10 +8,11 @@ namespace FreightSystem.PricingManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.2 (The Smart Box) ---");
+            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.3 (The Factory) ---");
             Console.WriteLine("(Type 'exit' to finish for the day)");
 
             // 1. THE WAREHOUSE (List)
+            // This 'bag' remembers every price we calculate.
             List<int> containerPrices = new List<int>();
 
             // 2. THE INFINITE LOOP
@@ -19,17 +20,16 @@ namespace FreightSystem.PricingManager
             {
                 Console.WriteLine(); 
                 
-                // 1. CREATE A NEW CONTAINER (The Object)
-                Container myBox = new Container();
-
-                // 2. FILL THE FORM
-                Console.Write("Enter Weight (kg) or 'exit': ");
+                // INPUT with Exit Check
+                Console.Write("Enter Container Weight (kg) or 'exit': ");
                 string weightInput = Console.ReadLine();
                 if (weightInput == "exit") break;
 
+                // Safe parsing (Try/Catch)
+                int containerWeight;
                 try 
                 {
-                     myBox.Weight = int.Parse(weightInput); // Putting data INTO the box
+                     containerWeight = int.Parse(weightInput);
                 }
                 catch
                 {
@@ -37,11 +37,15 @@ namespace FreightSystem.PricingManager
                     continue;
                 }
 
-                Console.Write("Enter Type (Standard/Dangerous): ");
-                myBox.Type = Console.ReadLine(); // Putting Data INTO the box 
-                
+                Console.Write("Enter Container Type (Standard/Dangerous): ");
+                string containerType = Console.ReadLine();
+
+                // 1. THE FACTORY (Constructor)
+                // We create the box AND fill it in one step.
+                // No more "empty ghost boxes".
+                Container myBox = new Container(containerWeight, containerType);
+                  
                 // 3. ASK THE BOX TO CALCULATE ITS OWN PRICE
-                // LOOK! No arguments! The box already knows its weight and type.
                 int price = myBox.CalculatePrice();
                 
                 // Print the result based on the price
@@ -58,7 +62,7 @@ namespace FreightSystem.PricingManager
                 
             } // End of Loop
 
-            // 3. THE SUMMARY
+            // 3. THE SUMMARY (End of Day Report)
             Console.WriteLine("\n--- END OF SHIFT REPORT ---");
             Console.WriteLine($"Total Containers Billed: {containerPrices.Count}");
             Console.WriteLine($"Total Revenue: ${containerPrices.Sum()}");
@@ -76,9 +80,16 @@ namespace FreightSystem.PricingManager
             public int Weight;
             public string Type;
 
+            // 1. THE CONSTRUCTOR (The Factory Machine)
+            // Forces you to provide weight and type when creating.
+            // THIS MUST BE INSIDE THE CLASS!
+            public Container(int weight, string type)
+            {
+                this.Weight = weight;
+                this.Type = type;
+            }
+
             // BEHAVIOR (Logic)
-            // Notice: No 'static'. No parameters (int w, string t).
-            // It uses 'this.Weight' and 'this.Type'.
             /// <summary>
             /// Calculates the shipping price based on weight and type rules.
             /// </summary>
