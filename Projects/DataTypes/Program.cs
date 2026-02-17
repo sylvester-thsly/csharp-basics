@@ -31,7 +31,7 @@ class Program
         // creating two variables: int a = 7, int b = 2;
 
         int a = 7; 
-        int b = 2; 
+        double b = 2; 
         Console.WriteLine(a/b); 
         
 

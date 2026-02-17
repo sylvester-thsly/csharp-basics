@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic; // Needed for Lists
 using System.Linq; // Needed for Sum()
 
@@ -8,7 +8,7 @@ namespace FreightSystem.PricingManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.3 (The Factory) ---");
+            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.4 (The Warehouse) ---");
             Console.WriteLine("(Type 'exit' to finish for the day)");
 
             // 1. THE WAREHOUSE (List)
@@ -37,12 +37,21 @@ namespace FreightSystem.PricingManager
                     continue;
                 }
 
-                Console.Write("Enter Container Type (Standard/Dangerous): ");
+                // --- 2. THE MENU (Using the Array) ---
+                Console.WriteLine("\nAvailable Container Types:");
+                // Loop through the Array to show options
+                // Container.Menu.Length gives us the number of items (3)
+                for (int i = 0; i < Container.Menu.Length; i++)
+                {
+                   // i+1 so it says "1. Standard" instead of "0. Standard"
+                   Console.WriteLine($"{i + 1}. {Container.Menu[i]}");
+                }
+
+                Console.Write("Choose Type (Enter text, e.g. 'Standard'): ");
                 string containerType = Console.ReadLine();
 
                 // 1. THE FACTORY (Constructor)
                 // We create the box AND fill it in one step.
-                // No more "empty ghost boxes".
                 Container myBox = new Container(containerWeight, containerType);
                   
                 // 3. ASK THE BOX TO CALCULATE ITS OWN PRICE
@@ -76,13 +85,17 @@ namespace FreightSystem.PricingManager
         /// </summary>
         class Container
         {
+            // --- NEW: THE MENU (Array) ---
+            // 'static' means it belongs to the Blueprint, not just one box.
+            // 'readonly' means nobody can change the menu while the app runs.
+            public static readonly string[] Menu = { "Standard", "Heavy", "Dangerous" };
+
             // STATE (Data)
             public int Weight;
             public string Type;
 
             // 1. THE CONSTRUCTOR (The Factory Machine)
             // Forces you to provide weight and type when creating.
-            // THIS MUST BE INSIDE THE CLASS!
             public Container(int weight, string type)
             {
                 this.Weight = weight;
