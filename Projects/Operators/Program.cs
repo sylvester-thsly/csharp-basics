@@ -7,7 +7,7 @@ class Program
         Console.WriteLine("--- Age Calculator ---");
         
         int currentYear = 2026;
-        int birthYear = 2000; // Change this to your birth year
+        int birthYear = 2008; // Change this to your birth year
         
         int age = currentYear - birthYear;
         

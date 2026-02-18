@@ -13,7 +13,7 @@
 - [x] **Tag 8: Grundkurs OOP I (Klassen & Objekte)** -> *Done (The Blueprint Works!)*
 - [x] **Tag 9: Grundkurs OOP II (Felder, Eigenschaften, Konstruktor)** -> *Done (The Factory Works!)*
 - [x] **Tag 10: Arrays & Listen** (The Warehouse) -> *Done (Shelves Built!)*
-- [ ] **Tag 11: Vererbung** (Inheritance - The Truck & The Van)
+- [x] **Tag 11: Vererbung** (Inheritance - The Truck & The Van) -> *Done (Container IS A Freight)*
 - [ ] **Tag 12: Polymorphie** (Many Forms)
 - [ ] **Tag 13: Programmieren mit Objekten**
 - [ ] **Tag 14: Nützliche .NET Klassen** (Random, Date, Math)

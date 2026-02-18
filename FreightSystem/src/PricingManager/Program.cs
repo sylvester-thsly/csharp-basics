@@ -8,14 +8,11 @@ namespace FreightSystem.PricingManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- CARGONERDS PRICING ENGINE v2.4 (The Warehouse) ---");
+            Console.WriteLine("--- CARGONERDS PRICING ENGINE v3.0 (The Inheritance) ---");
             Console.WriteLine("(Type 'exit' to finish for the day)");
 
-            // 1. THE WAREHOUSE (List)
-            // This 'bag' remembers every price we calculate.
             List<int> containerPrices = new List<int>();
 
-            // 2. THE INFINITE LOOP
             while (true)
             {
                 Console.WriteLine(); 
@@ -40,7 +37,6 @@ namespace FreightSystem.PricingManager
                 // --- 2. THE MENU (Using the Array) ---
                 Console.WriteLine("\nAvailable Container Types:");
                 // Loop through the Array to show options
-                // Container.Menu.Length gives us the number of items (3)
                 for (int i = 0; i < Container.Menu.Length; i++)
                 {
                    // i+1 so it says "1. Standard" instead of "0. Standard"
@@ -53,7 +49,12 @@ namespace FreightSystem.PricingManager
                 // 1. THE FACTORY (Constructor)
                 // We create the box AND fill it in one step.
                 Container myBox = new Container(containerWeight, containerType);
-                  
+                
+                // --- INHERITANCE IN ACTION ---
+                // 'Id' is NOT in the Container class. It comes from Freight!
+                myBox.Id = "CN-12345"; 
+                Console.WriteLine($"[Scanned ID: {myBox.Id}]"); // Proving we have an ID
+
                 // 3. ASK THE BOX TO CALCULATE ITS OWN PRICE
                 int price = myBox.CalculatePrice();
                 
@@ -71,23 +72,28 @@ namespace FreightSystem.PricingManager
                 
             } // End of Loop
 
-            // 3. THE SUMMARY (End of Day Report)
             Console.WriteLine("\n--- END OF SHIFT REPORT ---");
             Console.WriteLine($"Total Containers Billed: {containerPrices.Count}");
             Console.WriteLine($"Total Revenue: ${containerPrices.Sum()}");
-            Console.WriteLine("Good job today! See you tomorrow. 🚛💰");
         }
 
-        // --- THE BLUEPRINT (Construction Plan) ---
+        // --- THE GRANDPARENT (Base Class) ---
+        // This holds things that ANY freight has (Container, Pallet, Box).
+        class Freight
+        {
+            public string Id; // Every freight has an ID
+        }
+
+        // --- THE CHILD (Derived Class) ---
+        // 'Container : Freight' means "Container IS A Freight".
+        // It gets everything inside Freight for free!
         /// <summary>
         /// Represents a standard shipping container with weight and type.
         /// (This is our Object-Oriented Blueprint!)
         /// </summary>
-        class Container
+        class Container : Freight
         {
             // --- NEW: THE MENU (Array) ---
-            // 'static' means it belongs to the Blueprint, not just one box.
-            // 'readonly' means nobody can change the menu while the app runs.
             public static readonly string[] Menu = { "Standard", "Heavy", "Dangerous" };
 
             // STATE (Data)
@@ -95,7 +101,6 @@ namespace FreightSystem.PricingManager
             public string Type;
 
             // 1. THE CONSTRUCTOR (The Factory Machine)
-            // Forces you to provide weight and type when creating.
             public Container(int weight, string type)
             {
                 this.Weight = weight;
@@ -103,10 +108,6 @@ namespace FreightSystem.PricingManager
             }
 
             // BEHAVIOR (Logic)
-            /// <summary>
-            /// Calculates the shipping price based on weight and type rules.
-            /// </summary>
-            /// <returns>Price in Dollars (USD)</returns>
             public int CalculatePrice()
             {
                 if (this.Type == "Dangerous")
