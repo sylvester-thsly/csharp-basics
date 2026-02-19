@@ -8,119 +8,115 @@ namespace FreightSystem.PricingManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- CARGONERDS PRICING ENGINE v3.0 (The Inheritance) ---");
+            Console.WriteLine("--- CARGONERDS PRICING ENGINE v4.0 (Polymorphism) ---");
             Console.WriteLine("(Type 'exit' to finish for the day)");
 
-            List<int> containerPrices = new List<int>();
+            // --- 1. THE UNIVERSAL WAREHOUSE ---
+            // Before: List<int> (Just numbers)
+            // Now: List<Freight> (The actual objects!)
+            List<Freight> dailyFreight = new List<Freight>();
 
             while (true)
             {
                 Console.WriteLine(); 
-                
-                // INPUT with Exit Check
-                Console.Write("Enter Container Weight (kg) or 'exit': ");
-                string weightInput = Console.ReadLine();
-                if (weightInput == "exit") break;
+                Console.WriteLine("What do you want to add?");
+                Console.WriteLine("1. Container");
+                Console.WriteLine("2. Pallet"); // New Type!
+                Console.Write("Choose (1/2) or 'exit': ");
+                string choice = Console.ReadLine();
 
-                // Safe parsing (Try/Catch)
-                int containerWeight;
-                try 
+                if (choice == "exit") break;
+
+                Freight newFreight = null; // Placeholder
+
+                if (choice == "1") // Container
                 {
-                     containerWeight = int.Parse(weightInput);
+                    Console.Write("Enter Weight (kg): ");
+                    int w = int.Parse(Console.ReadLine());
+                    Console.Write("Enter Type (Standard/Heavy): ");
+                    string t = Console.ReadLine();
+                    
+                    newFreight = new Container(w, t); // Create Child 1
                 }
-                catch
+                else if (choice == "2") // Pallet
                 {
-                    Console.WriteLine("Invalid Number. Try again.");
-                    continue;
+                   Console.Write("Enter Destination (EU/US): ");
+                   string dest = Console.ReadLine();
+
+                   newFreight = new Pallet(dest); // Create Child 2
                 }
 
-                // --- 2. THE MENU (Using the Array) ---
-                Console.WriteLine("\nAvailable Container Types:");
-                // Loop through the Array to show options
-                for (int i = 0; i < Container.Menu.Length; i++)
+                if (newFreight != null)
                 {
-                   // i+1 so it says "1. Standard" instead of "0. Standard"
-                   Console.WriteLine($"{i + 1}. {Container.Menu[i]}");
-                }
-
-                Console.Write("Choose Type (Enter text, e.g. 'Standard'): ");
-                string containerType = Console.ReadLine();
-
-                // 1. THE FACTORY (Constructor)
-                // We create the box AND fill it in one step.
-                Container myBox = new Container(containerWeight, containerType);
-                
-                // --- INHERITANCE IN ACTION ---
-                // 'Id' is NOT in the Container class. It comes from Freight!
-                myBox.Id = "CN-12345"; 
-                Console.WriteLine($"[Scanned ID: {myBox.Id}]"); // Proving we have an ID
-
-                // 3. ASK THE BOX TO CALCULATE ITS OWN PRICE
-                int price = myBox.CalculatePrice();
-                
-                // Print the result based on the price
-                if (price == 0) // 0 means Rejected in our logic
-                {
-                     Console.WriteLine("STATUS: REJECTED ❌");
-                }
-                else
-                {
-                    Console.WriteLine("STATUS: ACCEPTED ✅");
+                    // POLYMORPHISM IN ACTION:
+                    // We treat it as "Freight", but it behaves like a Container or Pallet.
+                    int price = newFreight.CalculatePrice(); 
+                    
                     Console.WriteLine($"Price: ${price}");
-                    containerPrices.Add(price);
+                    dailyFreight.Add(newFreight); // Add to list
                 }
                 
             } // End of Loop
 
             Console.WriteLine("\n--- END OF SHIFT REPORT ---");
-            Console.WriteLine($"Total Containers Billed: {containerPrices.Count}");
-            Console.WriteLine($"Total Revenue: ${containerPrices.Sum()}");
+            foreach (Freight item in dailyFreight)
+            {
+                // The loop doesn't know if it's a Container or Pallet.
+                // It just knows it's Freight.
+                // But the 'CalculatePrice' method knows what to do!
+                Console.WriteLine($"ID: {item.Id} - Price: ${item.CalculatePrice()}");
+            }
+            // Sum only works on numbers, so we sum the CalculatePrice results
+            Console.WriteLine($"Total Revenue: ${dailyFreight.Sum(f => f.CalculatePrice())}");
         }
 
-        // --- THE GRANDPARENT (Base Class) ---
-        // This holds things that ANY freight has (Container, Pallet, Box).
+        // --- 1. THE BASE CLASS (The Contract) ---
         class Freight
         {
-            public string Id; // Every freight has an ID
+            public string Id = Guid.NewGuid().ToString().Substring(0, 5); // Auto-ID
+
+            // 'virtual' means: "My children CAN change this logic if they want."
+            public virtual int CalculatePrice()
+            {
+                return 0; // Default price
+            }
         }
 
-        // --- THE CHILD (Derived Class) ---
-        // 'Container : Freight' means "Container IS A Freight".
-        // It gets everything inside Freight for free!
-        /// <summary>
-        /// Represents a standard shipping container with weight and type.
-        /// (This is our Object-Oriented Blueprint!)
-        /// </summary>
+        // --- 2. CHILD CLASS (Container) ---
         class Container : Freight
         {
-            // --- NEW: THE MENU (Array) ---
-            public static readonly string[] Menu = { "Standard", "Heavy", "Dangerous" };
-
-            // STATE (Data)
             public int Weight;
             public string Type;
 
-            // 1. THE CONSTRUCTOR (The Factory Machine)
             public Container(int weight, string type)
             {
                 this.Weight = weight;
                 this.Type = type;
             }
 
-            // BEHAVIOR (Logic)
-            public int CalculatePrice()
+            // 'override' means: "I am changing the parent's logic!"
+            public override int CalculatePrice()
             {
-                if (this.Type == "Dangerous")
-                {
-                    return 0; // Rejected
-                }
-                else if (this.Type == "Standard")
-                {
-                    if (this.Weight > 30000) return 0; // Rejected
-                    else if (this.Weight > 10000) return 700; // Heavy
-                    else return 200; // Standard
-                }
-                return 0; // Unknown
+                 if (this.Weight > 10000) return 700; 
+                 else return 200; 
+            }
+        }
+
+        // --- 3. NEW CHILD CLASS (Pallet) ---
+        class Pallet : Freight
+        {
+            public string Destination;
+
+            public Pallet(string destination)
+            {
+                this.Destination = destination;
+            }
+
+            // Pallets have specialized pricing (different from Container)
+            public override int CalculatePrice()
+            {
+                if (this.Destination == "US") return 100; // More expensive
+                return 50; // Standard EU Pallet
             }
         }
         

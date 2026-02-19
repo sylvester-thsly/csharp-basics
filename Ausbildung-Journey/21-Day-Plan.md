@@ -14,7 +14,7 @@
 - [x] **Tag 9: Grundkurs OOP II (Felder, Eigenschaften, Konstruktor)** -> *Done (The Factory Works!)*
 - [x] **Tag 10: Arrays & Listen** (The Warehouse) -> *Done (Shelves Built!)*
 - [x] **Tag 11: Vererbung** (Inheritance - The Truck & The Van) -> *Done (Container IS A Freight)*
-- [ ] **Tag 12: Polymorphie** (Many Forms)
+- [x] **Tag 12: Polymorphie** (Many Forms) -> *Done (The Universal Logic)*
 - [ ] **Tag 13: Programmieren mit Objekten**
 - [ ] **Tag 14: Nützliche .NET Klassen** (Random, Date, Math)
 
