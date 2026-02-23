@@ -18,14 +18,16 @@
 - [ ] **Tag 13: Programmieren mit Objekten**
 - [ ] **Tag 14: Nützliche .NET Klassen** (Random, Date, Math)
 
-## 📦 Phase 3: The Professional (Advanced)
-- [ ] **Tag 15: Dateien & Streams** (Saving Data)
-- [ ] **Tag 16: Testen & Debuggen** (Fixing Bugs)
-- [ ] **Tag 17: Komponenten**
-- [ ] **Tag 18: GUI (Windows Forms / WPF)** -> *This is where we build user interfaces*
-- [ ] **Tag 19: Menüs & Dialoge**
-- [ ] **Tag 20: Ausnahmebehandlung** (Try/Catch - We did a little bit already!)
-- [ ] **Tag 21: Web Services** (The Internet)
+## 🌐 Phase 3: The API Developer (Backend)
+- [ ] **Tag 13: Interfaces & DI** (The API Foundation)
+- [ ] **Tag 14: ASP.NET Core Intro** (Creating your first API)
+- [ ] **Tag 15: Controllers & Routing** (The API Manager)
+- [ ] **Tag 16: JSON & DTOs** (Transferring Data)
+- [ ] **Tag 17: Entity Framework** (Database Connection)
+- [ ] **Tag 18: SQL Basics** (Interacting with the Ledger)
+- [ ] **Tag 19: API Testing** (Postman & Unit Tests)
+- [ ] **Tag 20: Errors in APIs** (Middleware & Global Handling)
+- [ ] **Tag 21: Final Project** (The CargoNerds API)
 
 ## 🧠 Phase 4: The Mindset (Personal Development)
 - [ ] **Read "Atomic Habits"** (1 Chapter/Day)
