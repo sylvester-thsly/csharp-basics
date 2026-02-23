@@ -19,7 +19,7 @@
 - [ ] **Tag 14: Nützliche .NET Klassen** (Random, Date, Math)
 
 ## 🌐 Phase 3: The API Developer (Backend)
-- [ ] **Tag 13: Interfaces & DI** (The API Foundation)
+- [x] **Tag 13: Interfaces & DI** (The API Foundation) -> *Done (The Contract is signed!)*
 - [ ] **Tag 14: ASP.NET Core Intro** (Creating your first API)
 - [ ] **Tag 15: Controllers & Routing** (The API Manager)
 - [ ] **Tag 16: JSON & DTOs** (Transferring Data)
